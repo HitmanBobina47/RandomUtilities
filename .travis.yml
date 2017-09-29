@@ -1,0 +1,19 @@
+language: python
+notifications:
+  email:
+    on_success: always
+    on_failure: always
+dist: trusty
+sudo: required
+addons:
+  sonarcloud:
+    organization: hitmanbobina47-github
+    token:
+      secure: UXmlDVzKFFIjTNu8CteuuDkSRMJ87etmna8QpHLAVFUS1a5a6PZhosYHEKlHd8e1toFXaS2am4FKb4yVc7ZhU6wcfe3GeMwQ2eJn6YaEHaJk3wC5lun+qq/GE1WrALKVakZNzIIuyTPkIuu0fk5jPHB+gJHbD2LOmRkKhPruiarnQu7wnTrfdsWm6Ex0VkQSLgb2ygjuZYsdRsqnVP7+wlBN+CpJQlVJuY3GmDD54fBj5c12nkpkjpwDHithMeVDlXYwpKXrXXGLDJuo0/Su/esm9m95hUK0e4ZY70vw0k7rzK04n4PqxodNQBrnZfrAucXKAyrV9zqLno+y8f3SqJkCzlOXZG5tkKxV8duTy3rW2988Z7eL6PxBlemDbdrI5U5ZIzQ8nCkwh4kaELSWRm+b9FbTEbmCvjZFad7SplRQmMEXbEfknZVRrpWTPJpFe2+B8ObrQeBWPQW3Tr2I0IiEopoq0B5NI9UfEZA057WivDdgXJQ/PRW/DM1aomXCtIrmmQlUC2of+lJqsDS59p/QLwpPiWnrDLcaDpUWgo49xuWDzBm48JdGSinRVrDESZfmFckeJDcdFMW3o77hOqIBPaTqjRET09+gApcSKBC6eN+MrUq07khdJzDrxLBC/QM5B5LmiXdnIUQ50mdqUJuZkiYZoQu3Q3L/+4Wqd2o=
+jdk:
+- oraclejdk8
+script:
+- sonar-scanner
+cache:
+  directories:
+  - "$HOME/.sonar/cache"
